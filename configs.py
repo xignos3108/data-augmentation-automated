@@ -1,5 +1,6 @@
 import albumentations as A
 
+
 PIP_CONFIGS = {
     'DEFAULT_TF': [
             A.Sharpen(p=1.0)
@@ -17,7 +18,7 @@ PIP_CONFIGS = {
         A.Equalize(),
         #A.FDA(),
         A.FancyPCA(),
-        A.FromFloat(), # white 10
+        #A.FromFloat(), # white 10
         A.GaussNoise(),
         A.GaussianBlur(),
         A.GlassBlur(),
@@ -29,7 +30,7 @@ PIP_CONFIGS = {
         A.MedianBlur(),
         A.MotionBlur(),
         A.MultiplicativeNoise(), # suggested
-        A.Normalize(), # blacked 21
+        #A.Normalize(), # blacked 21
         #A.PixelDistributionAdaptation(),
         A.Posterize(),
         A.RGBShift(),
@@ -44,7 +45,7 @@ PIP_CONFIGS = {
         A.RingingOvershoot(),
         A.Sharpen(p=1.0), # suggested
         A.Solarize(),
-        A.Superpixels(), # 뭉개짐 35
+        #A.Superpixels(), # 뭉개짐 35
         #A.TemplateTransform(),
         A.ToFloat(), # blacked 36
         A.ToGray(),
@@ -52,7 +53,7 @@ PIP_CONFIGS = {
         A.UnsharpMask()
         ], # 40
 
-    'spacial_tf': [
+    'SPACIAL_TF': [
         A.Affine(),
         #A.CenterCrop(),
         #A.CropAndPad(),
