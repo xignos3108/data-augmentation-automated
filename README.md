@@ -37,5 +37,6 @@ I(0010) -> 8 0.018359 0.525694 0.036719 0.056944 -> 0.018359
 
 (-5.000000000000664e-07, 0.8513885, 0.005468499999999999, 0.8680555, '4')
 
-Bug fixed (21/12/14)
+### Bug fixed (21/12/14)
+
 1.Bbox coordinate causing error are set to be ignored in tf process
