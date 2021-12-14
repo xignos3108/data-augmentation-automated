@@ -12,7 +12,10 @@ ILKYU YI
 
 ### Install albumentation library and dependencies
 ```shell script
-    pip install -U albumentations
+    conda install -c conda-forge imgaug
+    conda install -c conda-forge albumentations
+    
+    pip install -U git+https://github.com/albumentations-team/albumentations
 ```
 ### Run main.py
 ```shell script
