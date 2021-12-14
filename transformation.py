@@ -28,7 +28,7 @@ class transformation():
 
     def read_img(self, path):
         img = cv2.imread(path)
-        #img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         return img
 
     def read_label(self, path):
@@ -54,8 +54,11 @@ class transformation():
                 bbox_float = float(bbox_list[i][j])
                 bboxes_float.append(bbox_float)
             bboxes_float.append(bbox_list[i][4])
+            if 2*bboxes_float[0]-bboxes_float[2] < 0.0:
+                continue
             bboxes_float_list.append(bboxes_float)    
         return bboxes_float_list
+
 
     def do_transform(self, img_path, label_path):
         configs = PIP_CONFIGS
@@ -111,6 +114,7 @@ class transformation():
             
             # save transformed image
             transformed_image = transformed['image']
+            transformed_image = cv2.cvtColor(transformed_image, cv2.COLOR_RGB2BGR)
             save_img_dir = os.path.join(save_img_path, img_name+"_"+str(idx)+".jpg")
             cv2.imwrite(save_img_dir, transformed_image)
             
