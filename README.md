@@ -57,4 +57,5 @@ I(0010) -> 8 0.018359 0.525694 0.036719 0.056944 -> 0.018359
 ### Bug fixed 
 
 1.Bbox coordinate causing error are set to be ignored in tf process (21/12/14)
+
 2.Causing empty labels fixed (21/12/15)
