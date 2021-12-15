@@ -59,10 +59,10 @@ class transformation():
             bbox_y1 = 2*bboxes_float[1]-bboxes_float[3]
             bbox_x2 = 2*bboxes_float[0]+bboxes_float[2]
             bbox_y2 = 2*bboxes_float[1]+bboxes_float[3]
-            if (bbox_x1<0.0 and bbox_x1>1.0 
-            and bbox_y1<0.0 and bbox_y1>1.0 
-            and bbox_x2<0.0 and bbox_x2>1.0
-            and bbox_y2<0.0 and bbox_y2>1.0):
+            if (bbox_x1<0.0 or bbox_x1>2.0 
+                or bbox_y1<0.0 or bbox_y1>2.0 
+                or bbox_x2<0.0 or bbox_x2>2.0
+                or bbox_y2<0.0 or bbox_y2>2.0):
                 continue
             bboxes_float_list.append(bboxes_float)    
         return bboxes_float_list
